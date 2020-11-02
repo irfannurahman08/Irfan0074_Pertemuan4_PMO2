@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import id.web.iotproject.irfan0074_pertemuan4_pmo2.Model.PostPutDelKontak;
 import id.web.iotproject.irfan0074_pertemuan4_pmo2.Rest.ApiCliet;
-import id.web.iotproject.irfan0074_pertemuan4_pmo2.Rest.Apiiterface;
+import id.web.iotproject.irfan0074_pertemuan4_pmo2.Rest.ApiIterface;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -19,7 +19,7 @@ import retrofit2.Response;
 public class EditActivity extends AppCompatActivity {
     EditText edtId, edtNama, edtNomor;
     Button btUpdate, btDelete, btBack;
-    Apiiterface mApiInterface;
+    ApiIterface mApiInterface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class EditActivity extends AppCompatActivity {
         edtId.setKeyListener(null);
         edtNama.setText(mIntent.getStringExtra("Nama"));
         edtNomor.setText(mIntent.getStringExtra("Nomor"));
-        mApiInterface = ApiCliet.getClient().create(Apiiterface.class);
+        mApiInterface = ApiCliet.getClient().create(ApiIterface.class);
         btUpdate = (Button) findViewById(R.id.btUpdate2);
         btUpdate.setOnClickListener(new View.OnClickListener() {
             @Override

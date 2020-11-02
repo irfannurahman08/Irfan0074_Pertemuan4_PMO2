@@ -21,7 +21,8 @@ public class KontakAdapter extends RecyclerView.Adapter<KontakAdapter.MyViewHold
     }
     @Override
     public MyViewHolder onCreateViewHolder (ViewGroup parent, int viewType){
-        View mView = LayoutInflater.from(parent.getContext()).inflate(R.layout.kontak_list, parent, false);
+        View mView = LayoutInflater.from(parent.getContext()).inflate(R.layout.kontak_list,
+                parent, false);
         MyViewHolder mViewHolder = new MyViewHolder(mView);
         return mViewHolder;
     }

@@ -18,7 +18,7 @@ import id.web.iotproject.irfan0074_pertemuan4_pmo2.Adapter.KontakAdapter;
 import id.web.iotproject.irfan0074_pertemuan4_pmo2.Model.GetKontak;
 import id.web.iotproject.irfan0074_pertemuan4_pmo2.Model.Kontak;
 import id.web.iotproject.irfan0074_pertemuan4_pmo2.Rest.ApiCliet;
-import id.web.iotproject.irfan0074_pertemuan4_pmo2.Rest.Apiiterface;
+import id.web.iotproject.irfan0074_pertemuan4_pmo2.Rest.ApiIterface;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -26,7 +26,7 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
     SwipeRefreshLayout swipeRefreshLayout;
     Button btIns;
-    Apiiterface mApiInterface;
+    ApiIterface mApiInterface;
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mApiInterface = ApiCliet.getClient().create(Apiiterface.class);
+        mApiInterface = ApiCliet.getClient().create(ApiIterface.class);
         ma=this;
         refresh();
     }

@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import id.web.iotproject.irfan0074_pertemuan4_pmo2.Model.PostPutDelKontak;
 import id.web.iotproject.irfan0074_pertemuan4_pmo2.Rest.ApiCliet;
-import id.web.iotproject.irfan0074_pertemuan4_pmo2.Rest.Apiiterface;
+import id.web.iotproject.irfan0074_pertemuan4_pmo2.Rest.ApiIterface;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -19,7 +19,7 @@ import retrofit2.Response;
 public class InsertActivity extends AppCompatActivity {
     EditText edtNama, edtNomor;
     Button btInsert, btBack;
-    Apiiterface mApiInterface;
+    ApiIterface mApiInterface;
 
 
     @Override
@@ -28,7 +28,7 @@ public class InsertActivity extends AppCompatActivity {
         setContentView(R.layout.activity_insert);
         edtNama = (EditText) findViewById(R.id.edtNama);
         edtNomor = (EditText) findViewById(R.id.edtNomor);
-        mApiInterface = ApiCliet.getClient().create(Apiiterface.class);
+        mApiInterface = ApiCliet.getClient().create(ApiIterface.class);
         btInsert = (Button) findViewById(R.id.btInserting);
         btInsert.setOnClickListener(new View.OnClickListener() {
             @Override
